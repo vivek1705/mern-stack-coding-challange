@@ -1,0 +1,78 @@
+# MERN Stack Coding Challenge Completion Steps
+
+# Project Initialization
+1. Set up the project:
+   - Initialized a new MERN project using `npx create-react-app` for the frontend and setting up a Node.js and Express server for the backend.
+   
+2. Install dependencies:
+   - Installed necessary packages:
+     - Backend: `express`, `mongoose`, `axios`, `dotenv`, etc.
+     - Frontend: `react`, `axios`, `chart.js`, `react-chartjs-2`, etc.
+
+# Backend Development
+1. Create the Database Schema:
+   - Defined a Mongoose schema for product transactions with fields like `title`, `description`, `price`, `dateOfSale`, `category`, `sold`, etc.
+
+2. Fetch and Seed Data:
+   - Created an endpoint to fetch JSON data from the third-party API using `axios`.
+   - Processed the fetched data and inserted it into MongoDB using Mongoose.
+
+# API Development
+1. List Transactions API:
+   - Created a GET endpoint `/api/transactions`:
+     - Implemented search functionality to filter transactions by `title`, `description`, or `price`.
+     - Added pagination support with query parameters `page` and `perPage`.
+
+2. Statistics API:
+   - Created a GET endpoint `/api/statistics`:
+     - Calculated the total sale amount, total sold items, and total unsold items for a selected month.
+
+3. Bar Chart Data API:
+   - Created a GET endpoint `/api/barchart`:
+     - Provided data for a bar chart showing the number of items within specified price ranges for a selected month.
+
+4. Pie Chart Data API:
+   - Created a GET endpoint `/api/piechart`:
+     - Provided data for a pie chart showing the distribution of items across unique categories for a selected month.
+
+5. Combined Data API:
+   - Created a GET endpoint `/api/combined`:
+     - Fetched data from the above APIs and returned a combined JSON response.
+
+# Frontend Development
+1. Set up React Application:
+   - Initialized a React project using `create-react-app`.
+
+2. Create UI Components:
+   - Transactions Table:
+     - Developed a component to display transactions in a table format.
+     - Implemented a dropdown for selecting the month and a search box for filtering transactions.
+     - Added pagination controls for navigating through the transactions.
+
+   - Transactions Statistics:
+     - Created a component to display total sales, total sold items, and total unsold items for the selected month.
+
+   - Transactions Bar Chart:
+     - Integrated `react-chartjs-2` to visualize the number of items within specific price ranges for the selected month.
+
+   - Transactions Pie Chart:
+     - Integrated `react-chartjs-2` to visualize the distribution of items across unique categories for the selected month.
+
+# Integration and Testing
+1. API Integration:
+   - Connected frontend components to the backend APIs using `axios`.
+   - Ensured data was correctly fetched and displayed in the table and charts based on the selected month and search input.
+
+2. Testing:
+   - Tested each API endpoint for correctness and performance using tools like Postman.
+   - Verified the frontend components for accurate data representation and responsiveness.
+
+# Deployment
+1. Backend Deployment:
+   - Deployed the backend server to a hosting service like Heroku, setting up environment variables for configuration.
+
+2. Frontend Deployment:
+   - Deployed the React application to a hosting service like Netlify or Vercel, ensuring the frontend could correctly communicate with the deployed backend.
+
+# Conclusion
+The project was successfully completed by implementing the required functionalities, including listing transactions with search and pagination, displaying statistics, and visualizing data using bar and pie charts. The application is responsive and user-friendly, meeting all specified requirements.
