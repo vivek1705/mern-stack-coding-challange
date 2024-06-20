@@ -26,7 +26,7 @@ This project is a MERN stack application that implements various APIs to manage 
 ## Setup Instructions
 1. **Clone the repository**:
    ```bash
-   git clone [https://github.com/yourusername/mern-coding-challenge.git](https://github.com/vivek1705/mern-stack-coding-challange.git)
+   git clone https://github.com/vivek1705/mern-stack-coding-challange.git
    cd mern-stack-coding-challenge
    ```
 
